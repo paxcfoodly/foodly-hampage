@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '14일 무료 체험',
@@ -24,12 +25,12 @@ export default function TrialPage() {
           이 페이지는 기존 <code className="font-mono text-sm">foodlyR01.html</code>의
           Next 라우트 자리표시자입니다. 회원가입 폼은 후속 작업에서 이식됩니다.
         </p>
-        <a
+        <Link
           href="/"
           className="mt-8 inline-block font-mono text-sm text-teal hover:text-teal-dark"
         >
           ← 홈으로
-        </a>
+        </Link>
       </div>
     </main>
   );

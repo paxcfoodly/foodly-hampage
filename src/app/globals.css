@@ -15,7 +15,7 @@
 
   /* Neutrals */
   --color-ink: #0e1b16;
-  --color-ink-soft: #1a3e35;
+  --color-ink-soft: #204d42;
   --color-cream: #f7f5f0;
   --color-stone: #6b7b74;
   --color-stone-light: #eae8e3;
@@ -25,9 +25,10 @@
      but leaning toward neutral charcoal). Used for all dark-section
      backgrounds (Problem / Workflow / CTA / Footer / featured pricing
      card / mock-UI chrome / floating pill / video modal). Separate
-     from `--color-ink` so body text remains near-black. */
+     from `--color-ink` so body text remains near-black. Elevated
+     surfaces sit ~7% lighter for clear card/section separation. */
   --color-surface-dark: #12302a;
-  --color-surface-elevated: #1a3e35;
+  --color-surface-elevated: #204d42;
 
   /* Accent */
   --color-amber: #d4860a;

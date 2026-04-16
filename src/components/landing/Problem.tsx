@@ -108,8 +108,8 @@ export function Problem() {
 
 function ProblemCard({ num, title, body, icon, iconBg }: ProblemCardProps) {
   return (
-    <div className="group relative overflow-hidden bg-surface-elevated px-8 py-9 transition-colors hover:bg-[#254d42] max-[767px]:p-7">
-      <div className="mb-5 font-mono text-[11px] tracking-[1px] text-white/25">{num}</div>
+    <div className="group relative overflow-hidden bg-surface-elevated px-8 py-9 transition-colors hover:bg-[#2a5e51] max-[767px]:p-7">
+      <div className="mb-5 font-mono text-[11px] tracking-[1px] text-white/45">{num}</div>
       <div
         className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
         style={{ background: iconBg }}

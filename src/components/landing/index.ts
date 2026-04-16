@@ -16,6 +16,5 @@ export { Footer } from './Footer';
 export { FloatingPill } from './FloatingPill';
 export { BrandMark } from './BrandMark';
 export { Logo } from './Logo';
-export { Wordmark } from './Wordmark';
 export { DemoButton } from './DemoButton';
 export { DemoVideoModal } from './DemoVideoModal';

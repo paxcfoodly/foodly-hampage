@@ -40,7 +40,7 @@ export function Nav() {
       >
         <div className="justify-self-start">
           <Link href="/" aria-label="Foodly 홈" className="no-underline">
-            <Logo variant="dark" size={26} />
+            <Logo variant="dark" size={28} />
           </Link>
         </div>
 

@@ -17,7 +17,7 @@ export default async function OG() {
           justifyContent: 'space-between',
           padding: '88px',
           background:
-            'radial-gradient(ellipse 80% 60% at 70% 0%, rgba(29,158,117,0.35) 0%, transparent 70%), #0a3d30',
+            'radial-gradient(ellipse 80% 60% at 70% 0%, rgba(29,158,117,0.3) 0%, transparent 70%), #12302a',
           color: 'white',
           fontFamily: 'system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif',
           letterSpacing: '-0.025em',

@@ -15,18 +15,19 @@
 
   /* Neutrals */
   --color-ink: #0e1b16;
-  --color-ink-soft: #134a3a;
+  --color-ink-soft: #1a3e35;
   --color-cream: #f7f5f0;
   --color-stone: #6b7b74;
   --color-stone-light: #eae8e3;
   --color-stone-medium: #b8b5ae;
 
-  /* Dark surface — extends the teal family, used for all dark-section
+  /* Dark surface — desaturated deep teal (still in the brand family
+     but leaning toward neutral charcoal). Used for all dark-section
      backgrounds (Problem / Workflow / CTA / Footer / featured pricing
      card / mock-UI chrome / floating pill / video modal). Separate
      from `--color-ink` so body text remains near-black. */
-  --color-surface-dark: #0a3d30;
-  --color-surface-elevated: #134a3a;
+  --color-surface-dark: #12302a;
+  --color-surface-elevated: #1a3e35;
 
   /* Accent */
   --color-amber: #d4860a;

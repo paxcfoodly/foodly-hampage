@@ -103,16 +103,16 @@ function FeatureBlock({
 }) {
   return (
     <div
-      className={`reveal grid grid-cols-2 items-center gap-20 py-16 max-[1024px]:gap-12 max-[767px]:grid-cols-1 max-[767px]:gap-7 max-[767px]:py-10 ${
-        first ? 'mt-14 border-t-0 pt-0' : 'border-t border-stone-light'
-      } ${reverse ? 'max-[767px]:[&>div:first-child]:order-1 [&>div:first-child]:col-start-2 max-[767px]:[&>div:first-child]:col-start-auto [&>div:last-child]:col-start-1 max-[767px]:[&>div:last-child]:order-2 max-[767px]:[&>div:last-child]:col-start-auto max-[767px]:[&>div:last-child]:row-start-2' : ''}`}
+      className={`reveal grid grid-cols-1 items-center gap-7 py-10 md:grid-cols-2 md:gap-12 md:py-16 lg:gap-20 ${
+        first ? 'mt-14' : 'border-t border-stone-light'
+      }`}
     >
-      <div>
+      <div className={reverse ? 'md:col-start-2 md:row-start-1' : ''}>
         <div className="mb-3 text-[11px] font-bold uppercase tracking-[1.5px] text-teal">
           {eyebrow}
         </div>
         <h3
-          className="mb-4 font-serif leading-[1.2] text-ink"
+          className="mb-4 font-bold leading-[1.2] text-ink"
           style={{ fontSize: 'clamp(26px,3vw,38px)' }}
         >
           {title}
@@ -131,7 +131,11 @@ function FeatureBlock({
           ))}
         </div>
       </div>
-      <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
+      <div
+        className={`relative overflow-hidden rounded-2xl bg-white shadow-[0_24px_64px_rgba(0,0,0,0.12)] ${
+          reverse ? 'md:col-start-1 md:row-start-1' : ''
+        }`}
+      >
         {visual}
       </div>
     </div>

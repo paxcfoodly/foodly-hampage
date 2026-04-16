@@ -111,11 +111,11 @@ function Stat({
 }) {
   return (
     <div className="border-r border-stone-light px-9 text-center first:pl-0 last:border-r-0 last:pr-0 max-[1024px]:px-6 max-[767px]:w-full max-[767px]:border-b max-[767px]:border-r-0 max-[767px]:border-stone-light max-[767px]:px-0 max-[767px]:py-4 max-[767px]:last:border-b-0">
-      <div className="font-serif text-4xl leading-none text-ink max-[767px]:text-[28px]">
+      <div className="text-4xl font-extrabold leading-none tracking-tight text-ink max-[767px]:text-[28px]">
         {highlight === 'num' ? <span className="text-teal">{num}</span> : num}
         {highlight === 'unit' ? <span className="text-teal">{unit}</span> : unit}
       </div>
-      <div className="mt-1 text-xs text-stone">{label}</div>
+      <div className="mt-1.5 text-xs font-medium text-stone">{label}</div>
     </div>
   );
 }

@@ -11,17 +11,15 @@ const STEPS = [
 ];
 
 export function Workflow() {
+  // -1 means "all steps inactive" — renders briefly between cycles to mimic
+  // the original DOM-class-toggle reset effect without remounting children.
   const [activeIdx, setActiveIdx] = useState(2);
-  const [resetTick, setResetTick] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => {
       setActiveIdx((prev) => {
-        const next = (prev + 1) % STEPS.length;
-        if (next === 0) {
-          setTimeout(() => setResetTick((t) => t + 1), 400);
-        }
-        return next;
+        if (prev >= STEPS.length - 1) return -1;
+        return prev + 1;
       });
     }, 1000);
     return () => clearInterval(id);
@@ -58,10 +56,7 @@ export function Workflow() {
             </p>
           </div>
 
-          <div
-            key={resetTick}
-            className="reveal reveal-d3 relative mt-14 grid grid-cols-5 max-[1024px]:grid-cols-3 max-[1024px]:gap-5 max-[767px]:grid-cols-1 max-[767px]:gap-0"
-          >
+          <div className="reveal reveal-d3 relative mt-14 grid grid-cols-5 max-[1024px]:grid-cols-3 max-[1024px]:gap-5 max-[767px]:grid-cols-1 max-[767px]:gap-0">
             <span className="absolute left-[10%] right-[10%] top-7 h-px bg-gradient-to-r from-transparent via-teal-medium to-transparent max-[1024px]:hidden" />
             {STEPS.map((s, i) => {
               const active = i <= activeIdx;

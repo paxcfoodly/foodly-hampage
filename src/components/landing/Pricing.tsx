@@ -77,7 +77,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="reveal reveal-d3 mt-14 grid grid-cols-3 gap-0.5 overflow-hidden rounded-[20px] bg-stone-light max-[1024px]:grid-cols-1 max-[1024px]:gap-3 max-[1024px]:rounded-none max-[1024px]:bg-transparent">
+        <div className="reveal reveal-d3 mt-14 grid grid-cols-3 items-stretch gap-0.5 overflow-hidden rounded-[20px] bg-stone-light max-[1024px]:grid-cols-1 max-[1024px]:gap-3 max-[1024px]:rounded-none max-[1024px]:bg-transparent">
           {PLANS.map((p) => (
             <PlanCard key={p.name} plan={p} />
           ))}
@@ -92,14 +92,14 @@ export function Pricing() {
 
 function PlanCard({ plan }: { plan: Plan }) {
   const base =
-    'relative p-10 transition-transform max-[767px]:p-7 max-[1024px]:rounded-2xl max-[1024px]:border max-[1024px]:border-stone-light';
-  const cardBg = plan.featured ? 'bg-ink' : 'bg-white hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)]';
+    'relative flex h-full flex-col p-10 transition-transform max-[767px]:p-7 max-[1024px]:rounded-2xl max-[1024px]:border max-[1024px]:border-stone-light';
+  const cardBg = plan.featured
+    ? 'bg-ink'
+    : 'bg-white hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)]';
   const nameCls = plan.featured ? 'text-white/80' : 'text-stone';
   const priceCls = plan.featured ? 'text-white' : 'text-ink';
   const periodCls = plan.featured ? 'text-white/50' : 'text-stone';
-  const descCls = plan.featured
-    ? 'text-white/60 border-white/10'
-    : 'text-stone border-stone-light';
+  const descCls = plan.featured ? 'text-white/60 border-white/10' : 'text-stone border-stone-light';
   const featureCls = plan.featured ? 'text-white/75' : 'text-ink';
   const checkCls = plan.featured ? 'text-teal-medium' : 'text-teal';
   const btnCls = plan.featured
@@ -107,20 +107,26 @@ function PlanCard({ plan }: { plan: Plan }) {
     : 'bg-transparent border-[1.5px] border-stone-light text-ink hover:border-teal hover:text-teal';
 
   return (
-    <div className={`${base} ${cardBg} max-[767px]:order-none ${plan.featured ? 'max-[767px]:-order-1' : ''}`}>
-      {plan.featured && (
-        <span className="mb-4 inline-block rounded bg-teal-medium px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.5px] text-teal-dark">
-          가장 많이 선택
-        </span>
-      )}
+    <div
+      className={`${base} ${cardBg} max-[767px]:order-none ${plan.featured ? 'max-[767px]:-order-1' : ''}`}
+    >
+      {/* Tag slot — reserved on every card so price/name align horizontally
+          across all plans regardless of the featured badge. */}
+      <div className="mb-4 flex h-7 items-center">
+        {plan.featured && (
+          <span className="inline-block rounded bg-teal-medium px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.5px] text-teal-dark">
+            가장 많이 선택
+          </span>
+        )}
+      </div>
       <div className={`mb-3 text-[13px] font-bold uppercase tracking-[0.5px] ${nameCls}`}>
         {plan.name}
       </div>
-      <div className={`font-serif text-5xl leading-none max-[767px]:text-[38px] ${priceCls}`}>
-        {plan.price} <span className={`text-sm ${periodCls}`}>/월</span>
+      <div className={`text-5xl font-extrabold leading-none tracking-tight max-[767px]:text-[38px] ${priceCls}`}>
+        {plan.price} <span className={`text-sm font-medium ${periodCls}`}>/월</span>
       </div>
       <div className={`my-4 border-b pb-6 text-sm leading-[1.6] ${descCls}`}>{plan.desc}</div>
-      <div className="mb-8 flex flex-col gap-2.5">
+      <div className="mb-8 flex flex-grow flex-col gap-2.5">
         {plan.features.map((f) => (
           <div key={f} className={`flex items-start gap-2 text-sm ${featureCls}`}>
             <span className={`flex-shrink-0 font-bold ${checkCls}`}>✓</span>
@@ -130,7 +136,7 @@ function PlanCard({ plan }: { plan: Plan }) {
       </div>
       <Link
         href="/trial"
-        className={`block w-full rounded-[10px] py-3.5 text-center text-sm font-bold no-underline transition-all ${btnCls}`}
+        className={`mt-auto block w-full rounded-[10px] py-3.5 text-center text-sm font-bold no-underline transition-all ${btnCls}`}
       >
         {plan.cta}
       </Link>

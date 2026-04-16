@@ -1,4 +1,5 @@
 import { BrandMark } from './BrandMark';
+import { Wordmark } from './Wordmark';
 
 type LogoProps = {
   variant?: 'dark' | 'light';
@@ -6,24 +7,23 @@ type LogoProps = {
 };
 
 /**
- * Foodly logo lockup — BrandMark + Geist wordmark.
+ * Foodly logo lockup — BrandMark icon + custom SVG Wordmark.
  *
- * - `dark` variant places ink-color wordmark on light backgrounds (nav)
- * - `light` variant places white wordmark on dark backgrounds (footer)
+ * - `dark` variant puts the ink-coloured wordmark on light backgrounds
+ * - `light` variant puts a white wordmark on dark backgrounds
  *
- * The teal accent lives in the BrandMark icon; the wordmark stays
- * monochrome for a more corporate / less playful feel.
+ * Both the icon and wordmark are pure SVG — no web-font dependency,
+ * keeping the mark consistent across load states and devices.
  */
 export function Logo({ variant = 'dark', size = 26 }: LogoProps) {
   const wordmarkColor = variant === 'dark' ? 'text-ink' : 'text-white';
   return (
     <span className="inline-flex items-center gap-2.5">
       <BrandMark size={size} />
-      <span
-        className={`font-display text-[22px] font-semibold tracking-[-0.04em] leading-none ${wordmarkColor}`}
-      >
-        foodly
-      </span>
+      <Wordmark
+        height={Math.round(size * 0.78)}
+        className={`${wordmarkColor} block`}
+      />
     </span>
   );
 }

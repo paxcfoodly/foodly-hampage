@@ -4,8 +4,10 @@ import './globals.css';
 const SITE_NAME = 'Foodly';
 const SITE_DESCRIPTION =
   '거래명세서 사진 한 장으로 입고 완료. 장비 데이터 자동 수신. 식약처 수불대장 원클릭 출력.';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://foodly.kr';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Foodly — 식품 제조 통합 관리 플랫폼',
     template: '%s · Foodly',

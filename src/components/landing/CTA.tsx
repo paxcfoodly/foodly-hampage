@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { DemoButton } from './DemoButton';
 
 export function CTA() {
   return (
@@ -16,7 +17,7 @@ export function CTA() {
           </div>
         </div>
         <h2
-          className="reveal reveal-d1 mx-auto mb-4 max-w-[700px] font-serif leading-[1.2] text-white"
+          className="reveal reveal-d1 mx-auto mb-4 max-w-[700px] font-bold leading-[1.2] text-white"
           style={{ fontSize: 'clamp(32px,4vw,52px)' }}
         >
           수기 관리, 오늘로
@@ -47,12 +48,7 @@ export function CTA() {
             </svg>
             14일 무료 체험 시작
           </Link>
-          <button
-            type="button"
-            className="rounded-full border-[1.5px] border-white/25 bg-transparent px-10 py-4 text-base font-medium text-white transition-all hover:border-white/60 max-[767px]:w-full max-[767px]:max-w-[320px] max-[767px]:px-7 max-[767px]:py-3.5"
-          >
-            데모 영상 보기
-          </button>
+          <DemoButton className="rounded-full border-[1.5px] border-white/25 bg-transparent px-10 py-4 text-base font-medium text-white transition-all hover:border-white/60 max-[767px]:w-full max-[767px]:max-w-[320px] max-[767px]:px-7 max-[767px]:py-3.5" />
         </div>
         <div className="reveal reveal-d4 mt-5 text-[13px] text-white/35">
           카드 없이 시작 · 언제든 해지 · 해지 시 데이터 전체 다운로드 제공

@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+/* Placeholder — design tokens will be migrated in Phase 2 */
+@theme {
+  --color-teal: #1d9e75;
+}
+
+body {
+  margin: 0;
+}

@@ -71,12 +71,14 @@ export function Nav() {
           >
             로그인
           </a>
-          <Link
-            href="/trial"
+          <a
+            href="https://foodly-lite-production.up.railway.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-teal px-5 py-2 text-[14px] font-semibold text-white no-underline transition-all hover:-translate-y-px hover:bg-teal-dark hover:shadow-[0_4px_16px_rgba(29,158,117,0.35)]"
           >
             무료 체험 →
-          </Link>
+          </a>
         </div>
 
         <button
@@ -130,13 +132,15 @@ export function Nav() {
           >
             로그인
           </a>
-          <Link
-            href="/trial"
+          <a
+            href="https://foodly-lite-production.up.railway.app"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={close}
             className="rounded-full bg-teal px-5 py-2 font-sans text-sm font-bold text-white no-underline hover:bg-teal-dark"
           >
             무료 체험 →
-          </Link>
+          </a>
         </div>
       </div>
     </>

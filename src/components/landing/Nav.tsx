@@ -66,13 +66,15 @@ export function Nav() {
 
         <div className="flex items-center gap-2.5 justify-self-end max-[767px]:hidden">
           <a
-            href="#"
+            href="https://app.foodly.co.kr"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-stone-light px-5 py-2 text-[14px] font-medium text-ink no-underline transition-all hover:border-teal hover:text-teal"
           >
             로그인
           </a>
           <a
-            href="https://foodly-lite-production.up.railway.app"
+            href="https://app.foodly.co.kr"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-teal px-5 py-2 text-[14px] font-semibold text-white no-underline transition-all hover:-translate-y-px hover:bg-teal-dark hover:shadow-[0_4px_16px_rgba(29,158,117,0.35)]"
@@ -126,14 +128,16 @@ export function Nav() {
         ))}
         <div className="mt-2 flex flex-col items-center gap-3">
           <a
-            href="#"
+            href="https://app.foodly.co.kr"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={close}
             className="rounded-full border border-stone-light px-[18px] py-2 font-sans text-sm text-ink no-underline hover:border-teal hover:text-teal"
           >
             로그인
           </a>
           <a
-            href="https://foodly-lite-production.up.railway.app"
+            href="https://app.foodly.co.kr"
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}

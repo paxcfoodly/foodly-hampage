@@ -47,7 +47,9 @@ export function Hero() {
         style={{ animationDelay: '0.45s' }}
       >
         <Link
-          href="/trial"
+          href="https://app.foodly.co.kr"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-teal px-8 py-3.5 text-base font-bold text-white no-underline transition-all hover:-translate-y-0.5 hover:bg-teal-dark hover:shadow-[0_8px_32px_rgba(29,158,117,0.4)] max-[767px]:w-full max-[767px]:max-w-[320px] max-[767px]:justify-center max-[767px]:px-6 max-[767px]:py-3 max-[767px]:text-[15px]"
         >
           <svg

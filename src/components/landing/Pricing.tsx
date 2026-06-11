@@ -12,7 +12,7 @@ type Plan = {
 const PLANS: Plan[] = [
   {
     name: '베이직',
-    price: '₩29,000',
+    price: '₩9,900',
     desc: 'HACCP 미인증 소규모 업체. 수기 관리에서 막 벗어나려는 분들에게 적합합니다.',
     features: [
       '원료수불대장 자동 생성',
@@ -25,7 +25,7 @@ const PLANS: Plan[] = [
   },
   {
     name: '스탠다드',
-    price: '₩69,000',
+    price: '₩19,900',
     desc: 'HACCP 인증 준비 중이거나 장비 연동이 필요한 업체에 최적입니다.',
     features: [
       '베이직 전체 포함',
@@ -40,7 +40,7 @@ const PLANS: Plan[] = [
   },
   {
     name: '프로',
-    price: '₩139,000',
+    price: '₩59,900',
     desc: '다품목 대규모 생산 업체. 무제한 사용과 전담 지원이 필요한 분들에게 맞습니다.',
     features: [
       '스탠다드 전체 포함',

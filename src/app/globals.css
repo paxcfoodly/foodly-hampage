@@ -163,6 +163,11 @@ body {
   letter-spacing: -0.005em;
   font-weight: 400;
   line-height: 1.6;
+  /* Korean text wraps by syllable by default; break at word
+     boundaries instead so phrases don't split mid-word on narrow
+     (mobile) widths. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Pretendard display — subtle negative tracking, not aggressive. */
